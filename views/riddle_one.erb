@@ -1,0 +1,13 @@
+<% if @riddles.any? %>
+<h1> Riddle One: <%= @riddles.keys[0] %> </h1>
+<% else %>
+<h1> Can't find any riddles. </h1>
+<% end %>
+
+<form class="" action="/riddle_two" method="get">
+  <div class="form-group">
+    <label for="answer_one">Answer: </label>
+    <input type="text" name="answer_one">
+    <button type="submit" class="btn">Submit</button>
+  </div>
+</form>
