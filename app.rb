@@ -7,7 +7,8 @@ also_reload('lib/**/*.rb')
 
 get('/') do
   riddle = Riddles.new()
-  riddle.riddles()
+  @riddles = riddle.riddles
+  puts @riddles
   erb(:riddle_one)
 end
 
